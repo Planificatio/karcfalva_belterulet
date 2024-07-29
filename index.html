@@ -51,6 +51,11 @@
 		.toggle-button:hover {
     		background-color: #90EE90;
 		}
+		@media (max-width: 768px) {
+                    #toggleContainer {
+                        top: 130px; /* Adjust this value for mobile devices */
+                    }
+	        }
         </style>
         <title>Csíkkarcfalva - Jenőfalva végleges belterület</title>
     </head>
@@ -75,7 +80,7 @@
         <script src="data/Vglegestettbelterlet_2.js"></script>
         <script>
         var map = L.map('map', {
-            zoomControl:false, maxZoom:25, minZoom:13
+            zoomControl:false, maxZoom:25, minZoom:12
         }).fitBounds([[46.5149861698687,25.676511061726885],[46.56095039896558,25.80246020244423]]);
 		setTimeout(function() {
             map.setZoom(13);
@@ -152,7 +157,7 @@
             pane: 'pane_GoogleSatellite_0',
             opacity: 1.0,
             attribution: '',
-            minZoom: 13,
+            minZoom: 12,
             maxZoom: 25,
             minNativeZoom: 0,
             maxNativeZoom: 19
@@ -165,7 +170,7 @@
             pane: 'pane_OpenStreetMap_1',
             opacity: 1.0,
             attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
-            minZoom: 13,
+            minZoom: 12,
             maxZoom: 25,
             minNativeZoom: 0,
             maxNativeZoom: 19
